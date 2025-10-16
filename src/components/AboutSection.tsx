@@ -1,9 +1,15 @@
+"use client";
+
+import { scrollToSection } from "@/lib/scroll-to-section";
 import { ChevronDown } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section className="min-h-screen px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
-      <p className="text-lg text-muted-foreground leading-relaxed text-center mb-10">
+    <section
+      id="about-section"
+      className="min-h-screen px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto"
+    >
+      <p className="text-lg text-muted-foreground leading-relaxed text-center mb-10 pt-12">
         Final-year Computer Science student at ISI Ariana with hands-on
         experience building full-stack applications in Django/React and CLI
         tools in Go. As Head of the High-Level Programming Department at
@@ -36,6 +42,7 @@ const AboutSection = () => {
         </ul>
       </div>
       <button
+        onClick={() => scrollToSection("projects")}
         className="mt-12 w-full flex justify-center"
         type="button"
         aria-label="Scroll down"
