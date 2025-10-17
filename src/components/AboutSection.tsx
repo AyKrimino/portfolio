@@ -42,7 +42,7 @@ const AboutSection = () => {
         </ul>
       </div>
       <button
-        onClick={() => scrollToSection("projects")}
+        onClick={() => scrollToSection("projects-section")}
         className="mt-12 w-full flex justify-center"
         type="button"
         aria-label="Scroll down"
