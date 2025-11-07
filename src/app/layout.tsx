@@ -9,6 +9,10 @@ const firaCode = Fira_Code({
 export const metadata: Metadata = {
     title: "Ayoub Krimi | Backend Developer & Distributed Systems Enthusiast",
     description: "Final-year Computer Science student at ISI Ariana passionate about backend engineering, system architecture, and distributed systems. Experienced in Go, Python, and TypeScript — building scalable APIs, CI/CD pipelines, and automation tools. Seeking a backend internship to craft efficient, reliable systems.",
+    icons: {
+        icon: "/favicon.ico",
+        shortcut: "/favicon.ico",
+    },
     keywords: [
         "Ayoub Krimi",
         "Backend Developer",
