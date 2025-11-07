@@ -1,8 +1,5 @@
 "use client";
 
-import { scrollToSection } from "@/lib/scroll-to-section";
-import { ChevronDown } from "lucide-react";
-
 const AboutSection = () => {
   return (
     <section
@@ -41,14 +38,6 @@ const AboutSection = () => {
           </li>
         </ul>
       </div>
-      <button
-        onClick={() => scrollToSection("projects-section")}
-        className="mt-12 w-full flex justify-center"
-        type="button"
-        aria-label="Scroll down"
-      >
-        <ChevronDown className="h-8 w-8 sm:h-10 sm:w-10 text-gray-600 hover:text-gray-900 cursor-pointer hover:scale-150 transition-all duration-300 delay-75" />
-      </button>
     </section>
   );
 };
