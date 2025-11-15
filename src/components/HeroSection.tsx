@@ -1,16 +1,16 @@
 "use client";
 
 const GOPHERS = [
-  { path: "/gamer.svg", alt: "gopher gamer" },
-  { path: "/gotham.svg", alt: "gotham gopher" },
-  { path: "/lifting-1TB.svg", alt: "lifting 1TB gopher" },
-  { path: "/power-to-the-linux.svg", alt: "power to the linux gopher" },
-  { path: "/standing.svg", alt: "standing gopher" },
-  { path: "/surfing-js.svg", alt: "surfing JavaScript gopher" },
-  { path: "/vim-go.svg", alt: "vim-go gopher" },
-  { path: "/witch-learning.svg", alt: "witch learning gopher" },
-  { path: "/with-C-book.svg", alt: "gopher with C book" },
-  { path: "/zorro.svg", alt: "zorro gopher" },
+  { path: "gamer.svg", alt: "gopher gamer" },
+  { path: "gotham.svg", alt: "gotham gopher" },
+  { path: "lifting-1TB.svg", alt: "lifting 1TB gopher" },
+  { path: "power-to-the-linux.svg", alt: "power to the linux gopher" },
+  { path: "standing.svg", alt: "standing gopher" },
+  { path: "surfing-js.svg", alt: "surfing JavaScript gopher" },
+  { path: "vim-go.svg", alt: "vim-go gopher" },
+  { path: "witch-learning.svg", alt: "witch learning gopher" },
+  { path: "with-C-book.svg", alt: "gopher with C book" },
+  { path: "zorro.svg", alt: "zorro gopher" },
 ];
 
 const HeroSection = () => {
