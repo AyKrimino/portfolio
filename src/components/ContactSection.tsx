@@ -37,7 +37,7 @@ const ContactSection = () => {
         </a>
       </div>
       <img
-        src="/demo.gif"
+        src="demo.gif"
         alt="demo"
         className="mx-auto mt-10 max-w-[260px] sm:max-w-[300px] lg:max-w-[350px] w-full h-auto rounded-xl shadow-lg object-contain"
       />
