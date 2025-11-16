@@ -17,7 +17,7 @@ const SkillsSection = () => {
     }
   };
 
-  return <div id="skills-section" className="min-h-screen px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+  return <div id="skills-section" className="min-h-screen px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto mt-14">
 
     <h2 className="text-3xl font-bold text-center mb-6">Skills</h2>
 
@@ -42,9 +42,18 @@ const SkillsSection = () => {
 
               return (<div
                 key={skillItem.id}
-                className="inline-flex justify-between items-center gap-2 text-sm font-medium px-2.5 py-1 rounded-full bg-muted/40 text-muted-foreground transition-transform duration-150 hover:scale-105"
+                className="inline-flex justify-between items-center gap-2 text-sm font-medium px-2.5 py-1 rounded-full bg-muted/40 text-muted-foreground transition-transform duration-150 hover:scale-105 shadow-xs hover:shadow-md"
               >
-                <span className="">{skillItem.name}</span>
+                <div className="flex items-center justify-center">
+                  <span className="ml-4 flex flex-col gap-1">
+                    {skillItem.logos.map((logo, index) => (
+                      <img key={index} src={logo} alt={`${skillItem.name} logo`} className="w-6 h-6 mr-2" />
+                    ))}
+                  </span>
+
+                  <span className="">{skillItem.name}</span>
+                </div>
+
                 <span className={`w-2.5 h-2.5 rounded-full ${color}`}></span>
               </div>)
             })
