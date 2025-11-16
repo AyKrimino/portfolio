@@ -3,6 +3,7 @@ import ContactSection from "@/components/ContactSection";
 import HeroSection from "@/components/HeroSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ResumeSection from "@/components/ResumeSection";
+import SkillsSection from "@/components/SkillsSection";
 import StickyNav from "@/components/StickyNav";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
+        <SkillsSection />
         <ResumeSection />
         <ContactSection />
       </div>
