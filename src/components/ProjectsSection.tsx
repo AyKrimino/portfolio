@@ -3,9 +3,14 @@
 import { Card } from "./ui/card";
 import { projects } from "@/data/projects";
 import Link from "next/link";
+import { useState } from "react";
+import { Button } from "./ui/button";
 
 const ProjectsSection = () => {
+  const [showAll, setShowAll] = useState(false);
+
   const featuredProjects = projects.filter((project) => project.isFeatured);
+  const displayedProjects = showAll ? projects : featuredProjects;
 
   return (
     <section
@@ -14,7 +19,7 @@ const ProjectsSection = () => {
     >
       <h2 className="text-3xl font-bold text-center mb-6">Projects</h2>
       <div className="space-y-4 md:space-y-6">
-        {featuredProjects.map((project) => (
+        {displayedProjects.map((project) => (
           <Card key={project.slug} className="p-4 lg:p-6">
             <div className="flex flex-col gap-2 lg:gap-3">
               <h3 className="text-xl font-semibold">
@@ -60,6 +65,12 @@ const ProjectsSection = () => {
             </div>
           </Card>
         ))}
+        <Button
+          className="hover:cursor-pointer"
+          onClick={() => setShowAll(!showAll)}
+        >
+          {showAll ? "Show Less ▲" : "Show All Projects ▼"}
+        </Button>
       </div>
     </section>
   );
