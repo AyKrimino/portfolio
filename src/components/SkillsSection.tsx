@@ -17,7 +17,7 @@ const SkillsSection = () => {
     }
   };
 
-  return <div className="min-h-screen px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+  return <div id="skills-section" className="min-h-screen px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
 
     <h2 className="text-3xl font-bold text-center mb-6">Skills</h2>
 
