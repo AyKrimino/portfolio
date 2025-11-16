@@ -6,12 +6,16 @@ const AboutSection = () => {
       id="about-section"
       className="min-h-screen px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto"
     >
-      <p className="text-lg text-muted-foreground leading-relaxed text-center mb-10 pt-12">
+
+      <h2 className="text-3xl font-bold text-center mb-6">About</h2>
+
+      <p className="text-lg text-muted-foreground leading-relaxed text-center mb-6 md:mb-10">
         Final-year Computer Science student at ISI Ariana and Distributed Systems enthusiast.
         I build full-stack apps with Django/React and CLI tools in Go.
         As Head of the High-Level Programming Department at Freeways Club, I’ve led workshops on Git, Linux, and web fundamentals.
         Passionate about scalable systems, clean code, and open-source software.
       </p>
+
       <div className="text-left">
         <h2 className="text-2xl font-semibold mb-4">
           Head of High-Level Programming, Freeways Club
