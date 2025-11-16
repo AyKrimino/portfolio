@@ -23,10 +23,10 @@ const HeroSection = () => {
         Ayoub Krimi
       </h1>
       <h3 className="max-w-2xl font-medium text-lg sm:text-xl lg:text-2xl text-muted-foreground leading-relaxed">
-  Final Year CS Student seeking <strong>Backend Internship</strong> | 
-  Distributed Systems Enthusiast | 
-  Building Tools and Systems in <strong>Go</strong> | 
-  <strong>React/Next.js</strong> | <strong>Python/Django</strong>
+        Final Year CS Student seeking <strong>Backend Internship</strong> |
+        Distributed Systems Enthusiast |
+        Building Tools and Systems in <strong>Go</strong> |
+        <strong>React/Next.js</strong> | <strong>Python/Django</strong>
       </h3>
       <div className="flex items-center justify-center flex-wrap gap-4 px-14 md:px-8">
         {GOPHERS.map((gopher) => (
