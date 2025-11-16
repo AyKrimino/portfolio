@@ -1,5 +1,26 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 
+const LINK_ITEMS = [
+  {
+    id: "gmail",
+    url: "mailto:ayoub.krimi14@gmail.com",
+    label: "ayoub.krimi14@gmail.com",
+    IconComponent: Mail,
+  },
+  {
+    id: "github",
+    url: "https://github.com/AyKrimino",
+    label: "github.com/AyKrimino",
+    IconComponent: Github,
+  },
+  {
+    id: "linkedin",
+    url: "https://linkedin.com/in/ayoub-krimi",
+    label: "linkedin.com/in/ayoub-krimi",
+    IconComponent: Linkedin,
+  },
+];
+
 const ContactSection = () => {
   return (
     <section
@@ -12,29 +33,16 @@ const ContactSection = () => {
       </p>
 
       <div className="flex flex-col gap-4 mt-6">
-        <a
-          href="mailto:ayoub.krimi14@gmail.com"
-          className="inline-flex items-center justify-center gap-2 text-lg font-medium text-gray-900 hover:underline"
-        >
-          <Mail className="h-5 w-5" />
-          ayoub.krimi14@gmail.com
-        </a>
-
-        <a
-          href="https://github.com/AyKrimino"
-          className="inline-flex justify-center items-center gap-2 text-lg font-medium text-gray-900 hover:underline"
-        >
-          <Github className="h-5 w-5" />
-          github.com/AyKrimino
-        </a>
-
-        <a
-          href="https://linkedin.com/in/ayoub-krimi"
-          className="inline-flex justify-center items-center gap-2 text-lg font-medium text-gray-900 hover:underline"
-        >
-          <Linkedin className="h-5 w-5" />
-          linkedin.com/in/ayoub-krimi
-        </a>
+        {LINK_ITEMS.map((item) => (
+          <a
+            key={item.id}
+            href={item.url}
+            className="inline-flex items-center justify-center gap-2 text-lg font-medium text-gray-900 hover:underline"
+          >
+            <item.IconComponent className="h-5 w-5" />
+            {item.label}
+          </a>
+        ))}
       </div>
       <img
         src="demo.gif"
