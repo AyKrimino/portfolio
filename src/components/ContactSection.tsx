@@ -37,7 +37,7 @@ const ContactSection = () => {
           <a
             key={item.id}
             href={item.url}
-            className="inline-flex items-center justify-center gap-2 text-lg font-medium text-gray-900 hover:underline"
+            className="inline-flex items-center justify-center gap-2 text-lg font-medium text-gray-900 hover:underline hover:text-muted-foreground transition-colors duration-150 ease-in-out"
           >
             <item.IconComponent className="h-5 w-5" />
             {item.label}
@@ -47,7 +47,7 @@ const ContactSection = () => {
       <img
         src="demo.gif"
         alt="demo"
-        className="mx-auto mt-10 max-w-[260px] sm:max-w-[300px] lg:max-w-[350px] w-full h-auto rounded-xl shadow-lg object-contain"
+        className="mx-auto mt-10 max-w-[260px] sm:max-w-[300px] lg:max-w-[350px] w-full h-auto rounded-xl shadow-lg object-contain transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl"
       />
     </section>
   );
