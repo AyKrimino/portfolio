@@ -68,12 +68,14 @@ const ProjectsSection = () => {
             </div>
           </Card>
         ))}
-        <Button
-          className="hover:cursor-pointer"
-          onClick={() => setShowAll(!showAll)}
-        >
-          {showAll ? "Show Less ▲" : "Show All Projects ▼"}
-        </Button>
+        <div className="flex justify-center items-center">
+          <Button
+            className="px-6 py-2 text-sm md:text-base bg-gradient-to-r from-gray-900/80 to-gray-900/100 hover:cursor-pointer hover:ring-2 hover:ring-gray-900 hover:scale-105 transition-all duration-200 ease-out shadow-sm hover:shadow-md rounded-lg"
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? "Show Less ▲" : "Show All Projects ▼"}
+          </Button>
+        </div>
       </div>
     </section>
   );
