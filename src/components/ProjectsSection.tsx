@@ -20,7 +20,10 @@ const ProjectsSection = () => {
       <h2 className="text-3xl font-bold text-center mb-6">Projects</h2>
       <div className="space-y-4 md:space-y-6">
         {displayedProjects.map((project) => (
-          <Card key={project.slug} className="p-4 lg:p-6">
+          <Card
+            key={project.slug}
+            className="p-4 lg:p-6 transition-transform duration-200 ease-in-out hover:scale-105 shadow-md hover:shadow-xl rounded-xl hover:bg-white/50"
+          >
             <div className="flex flex-col gap-2 lg:gap-3">
               <h3 className="text-xl font-semibold">
                 {project.shortTitle || project.title}
@@ -46,7 +49,7 @@ const ProjectsSection = () => {
                     href={project.links.github.trim()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-gray-900 hover:underline"
+                    className="text-sm font-medium text-gray-900 hover:underline hover:text-muted-foreground transition-colors duration-150 ease-in-out"
                   >
                     GitHub
                   </Link>
@@ -56,7 +59,7 @@ const ProjectsSection = () => {
                     href={project.links.liveDemo.trim()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-gray-900 hover:underline"
+                    className="text-sm font-medium text-gray-900 hover:underline hover:text-muted-foreground transition-colors duration-150 ease-in-out"
                   >
                     Live Demo
                   </Link>
