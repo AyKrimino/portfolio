@@ -15,7 +15,7 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects-section"
-      className="min-h-screen px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto"
+      className="min-h-screen px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto mt-12 sm:mt-0"
     >
       <h2 className="text-3xl font-bold text-center mb-6">Projects</h2>
       <div className="space-y-4 md:space-y-6">
