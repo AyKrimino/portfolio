@@ -37,7 +37,7 @@ const ContactSection = () => {
           <a
             key={item.id}
             href={item.url}
-            className="inline-flex items-center justify-center gap-2 text-lg font-medium text-gray-900 hover:underline hover:text-muted-foreground transition-colors duration-150 ease-in-out"
+            className="inline-flex items-center justify-center gap-2 text-lg font-medium text-gray-900 dark:text-gray-100 hover:underline hover:text-muted-foreground transition-colors duration-150 ease-in-out"
           >
             <item.IconComponent className="h-5 w-5" />
             {item.label}

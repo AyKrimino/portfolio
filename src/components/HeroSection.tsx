@@ -44,7 +44,7 @@ const HeroSection = () => {
                 src={gopher.path}
                 alt={gopher.alt}
                 loading="lazy"
-                className="aspect-square object-contain w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-white/60 shadow-md p-2 rounded-full drop-shadow-md transition-transform duration-200 ease-out transform group-hover:-translate-y-1 group-hover:scale-105 group-focus-visible:-translate-y-1 group-focus-visible:scale-105"
+                className="aspect-square object-contain w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-white/60 dark:bg-white/10 shadow-md p-2 rounded-full drop-shadow-md transition-transform duration-200 ease-out transform group-hover:-translate-y-1 group-hover:scale-105 group-focus-visible:-translate-y-1 group-focus-visible:scale-105"
               />
             </a>
           </div>

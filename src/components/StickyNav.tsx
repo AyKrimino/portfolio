@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "./ui/dropdown-menu";
-import { Menu as MenuIcon} from "lucide-react";
+import { Menu as MenuIcon } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const NAV_ITEMS = [
   { id: "hero-section", label: "Home" },
@@ -36,7 +37,7 @@ export default function StickyNav() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className="backdrop-blur bg-white/20 rounded-b-lg shadow-sm">
+        <nav className="backdrop-blur bg-white/20 rounded-b-lg shadow-sm dark:bg-background/20">
 
           <ul className="hidden md:flex gap-3 items-center justify-center py-3">
             {NAV_ITEMS.map((item) => (
@@ -44,8 +45,8 @@ export default function StickyNav() {
                 <a
                   href={`#${item.id}`}
                   className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${active === item.id
-                    ? "bg-primary text-white"
-                    : "text-muted-foreground hover:text-gray-900"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-gray-900 dark:hover:text-gray-100"
                     }`}
                   aria-current={active === item.id ? "true" : undefined}
                 >
@@ -55,7 +56,7 @@ export default function StickyNav() {
             ))}
           </ul>
 
-          <div className="flex md:hidden items-center py-2">
+          <div className="flex md:hidden items-center justify-between py-2">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button
@@ -68,15 +69,19 @@ export default function StickyNav() {
               <DropdownMenuContent>
                 {NAV_ITEMS.map((item) => (
                   <DropdownMenuItem key={item.id} asChild>
-                    <a href={`#${item.id}`} className={`block w-full text-left px-3 py-2 rounded-md text-sm font-medium hover:cursor-pointer ${active == item.id ? "bg-gray-900 text-white" : "text-muted-foreground hover:text-gray-900"}`}>
+                    <a href={`#${item.id}`} className={`block w-full text-left px-3 py-2 rounded-md text-sm font-medium hover:cursor-pointer ${active == item.id ? "bg-gray-900 text-white dark:bg-white dark:text-gray-900" : "text-muted-foreground hover:text-gray-900 dark:hover:text-gray-100"}`}>
                       {item.label}
                     </a>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+            <ThemeToggle />
           </div>
 
+          <div className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2">
+            <ThemeToggle />
+          </div>
         </nav>
       </div>
     </header>

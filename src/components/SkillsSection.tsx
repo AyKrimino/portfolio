@@ -33,7 +33,7 @@ const SkillsSection = () => {
       {
         SKILLS.map((skill) => (<Card
           key={skill.id}
-          className="p-4 lg:p-6 transition-transform duration-200 ease-in-out hover:scale-105 shadow-md hover:shadow-xl rounded-xl hover:bg-white/50"
+          className="p-4 lg:p-6 transition-transform duration-200 ease-in-out hover:scale-105 shadow-md hover:shadow-xl rounded-xl hover:bg-white/50 dark:hover:bg-white/10"
         >
           <CardTitle>{skill.label}</CardTitle>
           {

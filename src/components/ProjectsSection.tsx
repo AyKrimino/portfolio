@@ -22,7 +22,7 @@ const ProjectsSection = () => {
         {displayedProjects.map((project) => (
           <Card
             key={project.slug}
-            className="p-4 lg:p-6 transition-transform duration-200 ease-in-out hover:scale-105 shadow-md hover:shadow-xl rounded-xl hover:bg-white/50"
+            className="p-4 lg:p-6 transition-transform duration-200 ease-in-out hover:scale-105 shadow-md hover:shadow-xl rounded-xl hover:bg-white/50 dark:hover:bg-white/10"
           >
             <div className="flex flex-col gap-2 lg:gap-3">
               <h3 className="text-xl font-semibold">
@@ -49,7 +49,7 @@ const ProjectsSection = () => {
                     href={project.links.github.trim()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-gray-900 hover:underline hover:text-muted-foreground transition-colors duration-150 ease-in-out"
+                    className="text-sm font-medium text-gray-900 dark:text-gray-100 hover:underline hover:text-muted-foreground transition-colors duration-150 ease-in-out"
                   >
                     GitHub
                   </Link>
@@ -59,7 +59,7 @@ const ProjectsSection = () => {
                     href={project.links.liveDemo.trim()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-gray-900 hover:underline hover:text-muted-foreground transition-colors duration-150 ease-in-out"
+                    className="text-sm font-medium text-gray-900 dark:text-gray-100 hover:underline hover:text-muted-foreground transition-colors duration-150 ease-in-out"
                   >
                     Live Demo
                   </Link>
@@ -70,7 +70,7 @@ const ProjectsSection = () => {
         ))}
         <div className="flex justify-center items-center">
           <Button
-            className="px-6 py-2 text-sm md:text-base bg-gradient-to-r from-gray-900/80 to-gray-900/100 hover:cursor-pointer hover:ring-2 hover:ring-gray-900 hover:scale-105 transition-all duration-200 ease-out shadow-sm hover:shadow-md rounded-lg"
+            className="px-6 py-2 text-sm md:text-base bg-gradient-to-r from-gray-900/80 to-gray-900/100 dark:from-gray-100/80 dark:to-gray-100/100 dark:text-gray-900 hover:cursor-pointer hover:ring-2 hover:ring-gray-900 dark:hover:ring-gray-100 hover:scale-105 transition-all duration-200 ease-out shadow-sm hover:shadow-md rounded-lg"
             onClick={() => setShowAll(!showAll)}
           >
             {showAll ? "Show Less ▲" : "Show All Projects ▼"}

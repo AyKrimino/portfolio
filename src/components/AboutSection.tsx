@@ -37,7 +37,7 @@ const AboutSection = () => {
       </div>
 
       <div className="mx-auto mt-12 max-w-sm">
-        <div className="relative p-2 rounded-2xl bg-gradient-to-br from-muted/20 to-muted/5 backdrop-blur-sm border border-white/10 shadow-xl transition duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:brightness-105">
+        <div className="relative p-2 rounded-2xl bg-gradient-to-br from-muted/20 to-muted/5 backdrop-blur-sm border border-white/10 dark:border-white/20 shadow-xl transition duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:brightness-105">
           <img
             src="theprimeagen.gif"
             className="w-full h-auto rounded-xl object-contain transition-transform duration-200 ease-in-out hover:scale-105"
