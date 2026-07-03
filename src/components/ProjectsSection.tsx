@@ -1,10 +1,11 @@
 "use client";
 
-import { Card } from "./ui/card";
+import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
 import { projects } from "@/data/projects";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "./ui/button";
+import { Github, ExternalLink, Star } from "lucide-react";
 
 const ProjectsSection = () => {
   const [showAll, setShowAll] = useState(false);
@@ -15,43 +16,67 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects-section"
-      className="min-h-screen px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto mt-12 sm:mt-0"
+      className="min-h-screen px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto py-20 flex flex-col justify-center"
     >
-      <h2 className="text-3xl font-bold text-center mb-6">Projects</h2>
-      <div className="space-y-4 md:space-y-6">
+      <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
+        Projects
+      </h2>
+
+      <div className="space-y-6">
         {displayedProjects.map((project) => (
           <Card
             key={project.slug}
-            className="p-4 lg:p-6 transition-transform duration-200 ease-in-out hover:scale-105 shadow-md hover:shadow-xl rounded-xl hover:bg-white/50 dark:hover:bg-white/10"
+            className="group relative overflow-hidden border-border/60 hover:border-border transition-colors duration-300"
           >
-            <div className="flex flex-col gap-2 lg:gap-3">
-              <h3 className="text-xl font-semibold">
-                {project.shortTitle || project.title}
-              </h3>
-              <p className="text-sm text-muted-foreground">
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary/60 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+            <CardHeader>
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-center gap-3 flex-wrap">
+                  <CardTitle className="text-lg sm:text-xl">
+                    {project.shortTitle || project.title}
+                  </CardTitle>
+                  {project.isFeatured && (
+                    <span className="flex items-center gap-1 text-xs font-medium text-muted-foreground bg-muted/50 px-2 py-0.5 rounded-full">
+                      <Star className="h-3 w-3 fill-current" />
+                      Featured
+                    </span>
+                  )}
+                </div>
+                {project.date && (
+                  <span className="shrink-0 text-xs text-muted-foreground mt-1">
+                    {project.date}
+                  </span>
+                )}
+              </div>
+            </CardHeader>
+
+            <CardContent className="pt-0">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-2 mt-2">
+              <div className="flex flex-wrap gap-1.5 mt-4">
                 {project.techStack.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="text-xs px-2 py-1 bg-muted rounded-md text-muted-foreground"
+                    className="text-xs px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground/80"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
 
-              <div className="flex gap-3 mt-4">
+              <div className="flex flex-wrap gap-3 mt-4">
                 {project.links.github && (
                   <Link
                     href={project.links.github.trim()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-gray-900 dark:text-gray-100 hover:underline hover:text-muted-foreground transition-colors duration-150 ease-in-out"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    GitHub
+                    <Github className="h-4 w-4" />
+                    Source
                   </Link>
                 )}
                 {project.links.liveDemo && (
@@ -59,21 +84,27 @@ const ProjectsSection = () => {
                     href={project.links.liveDemo.trim()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-gray-900 dark:text-gray-100 hover:underline hover:text-muted-foreground transition-colors duration-150 ease-in-out"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                   >
+                    <ExternalLink className="h-4 w-4" />
                     Live Demo
                   </Link>
                 )}
               </div>
-            </div>
+            </CardContent>
           </Card>
         ))}
-        <div className="flex justify-center items-center">
+
+        <div className="flex justify-center pt-2">
           <Button
-            className="px-6 py-2 text-sm md:text-base bg-gradient-to-r from-gray-900/80 to-gray-900/100 dark:from-gray-100/80 dark:to-gray-100/100 dark:text-gray-900 hover:cursor-pointer hover:ring-2 hover:ring-gray-900 dark:hover:ring-gray-100 hover:scale-105 transition-all duration-200 ease-out shadow-sm hover:shadow-md rounded-lg"
+            variant="outline"
+            className="group"
             onClick={() => setShowAll(!showAll)}
           >
-            {showAll ? "Show Less ▲" : "Show All Projects ▼"}
+            {showAll ? "Show Less" : "Show All Projects"}
+            <span className="inline-block transition-transform duration-200 group-hover:translate-y-0.5">
+              {showAll ? "▲" : "▼"}
+            </span>
           </Button>
         </div>
       </div>
