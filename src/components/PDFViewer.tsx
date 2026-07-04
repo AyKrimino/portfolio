@@ -6,9 +6,7 @@ import "react-pdf/dist/Page/AnnotationLayer.css";
 import { ChevronLeft, ChevronRight, Loader2, Download } from "lucide-react";
 import { Button } from "./ui/button";
 
-pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
-
-pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+pdfjs.GlobalWorkerOptions.workerSrc = "pdf.worker.min.mjs";
 
 const PDFViewer = () => {
   const [numPages, setNumPages] = useState<number | null>(null);
