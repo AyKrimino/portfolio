@@ -1,20 +1,31 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { Button } from "./ui/button";
+import { Download, ExternalLink } from "lucide-react";
+
+const PDFViewer = dynamic(() => import("./PDFViewer"), { ssr: false });
 
 const ResumeSection = () => {
   return (
     <section
       id="resume-section"
-      className="min-h-screen flex flex-col items-center justify-center gap-4 lg:gap-6 px-4 sm:px-6 lg:px-8 text-center"
+      className="min-h-screen px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto py-20 flex flex-col justify-center"
     >
-      <h2 className="text-3xl font-bold text-center mb-6">Resume</h2>
+      <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
+        Resume
+      </h2>
 
-      <a href="resume.pdf" download="Ayoub_Krimi_Resume.pdf">
-        <Button className="px-6 py-2 text-sm md:text-base bg-gradient-to-r from-gray-900/80 to-gray-900/100 dark:from-gray-100/80 dark:to-gray-100/100 dark:text-gray-900 hover:cursor-pointer hover:ring-2 hover:ring-gray-900 dark:hover:ring-gray-100 hover:scale-105 transition-all duration-200 ease-out shadow-sm hover:shadow-md rounded-lg">
-          Download Resume
-        </Button>
-      </a>
+      <PDFViewer />
+
+      <div className="flex flex-col sm:flex-row items-center justify-center mt-6">
+        <a href="resume.pdf" download="Ayoub_Krimi_Resume.pdf">
+          <Button className="w-full sm:w-auto">
+            <Download className="h-4 w-4" />
+            Download PDF
+          </Button>
+        </a>
+      </div>
     </section>
   );
 };
