@@ -43,11 +43,7 @@ const HeroSection = () => {
       id="hero-section"
       className="relative min-h-screen flex flex-col items-center justify-center gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8 text-center overflow-hidden"
     >
-      <div aria-hidden="true" className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.08] via-transparent to-transparent dark:from-primary/[0.12]" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/[0.03] dark:bg-primary/[0.05] blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-primary/[0.02] dark:bg-primary/[0.04] blur-3xl" />
-      </div>
+
 
       <div
         className={`flex flex-col items-center gap-5 sm:gap-6 transition-all duration-1000 ease-out ${
