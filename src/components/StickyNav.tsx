@@ -8,6 +8,7 @@ import { ThemeToggle } from "./ThemeToggle";
 const NAV_ITEMS = [
   { id: "hero-section", label: "Home" },
   { id: "about-section", label: "About" },
+  { id: "experience-section", label: "Experience" },
   { id: "projects-section", label: "Projects" },
   { id: "skills-section", label: "Skills" },
   { id: "resume-section", label: "Resume" },
@@ -64,11 +65,10 @@ export default function StickyNav() {
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
-                  className={`relative px-3 py-2 text-sm font-medium transition-colors ${
-                    active === item.id
+                  className={`relative px-3 py-2 text-sm font-medium transition-colors ${active === item.id
                       ? "text-foreground"
                       : "text-muted-foreground hover:text-foreground"
-                  }`}
+                    }`}
                   aria-current={active === item.id ? "true" : undefined}
                 >
                   {item.label}
@@ -100,11 +100,10 @@ export default function StickyNav() {
                     <SheetClose key={item.id} asChild>
                       <a
                         href={`#${item.id}`}
-                        className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                          active === item.id
+                        className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${active === item.id
                             ? "bg-primary text-primary-foreground"
                             : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                        }`}
+                          }`}
                         aria-current={active === item.id ? "true" : undefined}
                       >
                         {item.label}

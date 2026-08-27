@@ -1,0 +1,52 @@
+import type { ExperienceItem } from "@/types/experience";
+
+export const EXPERIENCE: ExperienceItem[] = [
+  {
+    id: "asteroidea-freelance",
+    role: "Software Developer (Freelance)",
+    type: "freelance",
+    company: "Asteroidea",
+    companyUrl: "https://asteroidea.co/",
+    location: "Mégrine, Ben Arous, Tunisia · On-site",
+    period: "Jul 2026 - Present",
+    duration: "2 mos",
+    isCurrent: true,
+    techStack: ["Go", "Gin", "PostgreSQL", "React", "TypeScript", "Docker", "NATS"],
+    highlights: [
+      "Continued contributing to POSIFY, a production-grade parking management solution, after successfully completing my internship on the same team.",
+      "Developed new backend and frontend features while improving existing functionality through refactoring, performance enhancements, and bug fixing.",
+      "Designed and implemented new REST APIs and contributed to distributed, event-driven communication between internal and external services using NATS.",
+      "Worked closely with the CTO, developers, and QA team to prepare the platform for customer demonstrations and real-world deployment scenarios.",
+      "Performed extensive validation and testing in production-like environments, ensuring reliable integration with parking infrastructure and external microservices.",
+    ],
+  },
+  {
+    id: "asteroidea-internship",
+    role: "Full-Stack Developer Intern",
+    type: "internship",
+    company: "Asteroidea",
+    companyUrl: "https://asteroidea.co/",
+    location: "Mégrine, Ben Arous, Tunisia · On-site",
+    period: "Jan 2026 - Jun 2026",
+    duration: "6 mos",
+    techStack: [
+      "Go",
+      "Gin",
+      "PostgreSQL",
+      "React",
+      "TypeScript",
+      "NATS",
+      "Docker",
+      "Docker Compose",
+    ],
+    highlights: [
+      "Contributed to the development of POSIFY, an integrated parking management solution composed of a Point of Sale (POS) system and a Backoffice platform.",
+      "Designed and implemented backend services and REST APIs in Go (Gin), focusing on scalable architecture, business logic, and PostgreSQL data management.",
+      "Developed React/TypeScript interfaces for both the POS and Backoffice applications, delivering operational workflows and administrative features.",
+      "Built event-driven microservices using NATS to synchronize data with external systems and support real-time communication across the platform.",
+      "Developed a dedicated microservice for EPSON receipt printers and integrated the POS with parking hardware, including the PMS, printer, tariff, barrier, and camera systems, through HTTP, Server-Sent Events (SSE), and NATS.",
+      "Implemented authentication, role-based access control (RBAC), dashboards, and configuration management while collaborating on the overall system architecture.",
+      "Containerized services with Docker/Docker Compose and took part in the deployment workflow, publishing application images to a private Nexus registry for validation in the company's testing environment.",
+    ],
+  },
+];
