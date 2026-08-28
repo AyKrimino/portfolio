@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { Button } from "./ui/button";
-import { Download, ExternalLink } from "lucide-react";
+import { Download } from "lucide-react";
 
 const PDFViewer = dynamic(() => import("./PDFViewer"), { ssr: false });
 
@@ -15,9 +15,7 @@ const ResumeSection = () => {
       <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
         Resume
       </h2>
-
-      <PDFViewer />
-
+      <PDFViewer file="resume.pdf" downloadFileName="Ayoub_Krimi_Resume.pdf" />
       <div className="flex flex-col sm:flex-row items-center justify-center mt-6">
         <a href="resume.pdf" download="Ayoub_Krimi_Resume.pdf">
           <Button className="w-full sm:w-auto">

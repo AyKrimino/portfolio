@@ -1,5 +1,5 @@
 export interface ProjectLink {
-  github: string;
+  github?: string;
   liveDemo?: string;
   video?: string;
   screenshots?: string[];
@@ -13,6 +13,7 @@ export interface Project {
   techStack: string[];
   links: ProjectLink;
   isFeatured?: boolean;
+  isClosedSource?: boolean;
   date?: string;
   category?: "web" | "cli" | "fullstack" | "api" | "gui";
 }

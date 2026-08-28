@@ -2,6 +2,19 @@ import type { Project } from "@/types/projects";
 
 export const projects: Project[] = [
   {
+    title: "POSIFY – Parking Management Platform",
+    slug: "posify",
+    shortTitle: "POSIFY",
+    description:
+      "An integrated parking management platform (POS + Backoffice) built for Asteroidea, with event-driven microservices in Go and hardware integrations for printers, barriers, and cameras. Started as my final-year internship (PFE) project, now an ongoing freelance engagement.",
+    techStack: ["Go", "Gin", "PostgreSQL", "React", "TypeScript", "NATS", "Docker"],
+    date: "Jan 2026 – Present",
+    category: "fullstack",
+    isFeatured: true,
+    isClosedSource: true,
+    links: {},
+  },
+  {
     title: "SysAct – Linux System Utility",
     slug: "sysact",
     shortTitle: "SysAct",
