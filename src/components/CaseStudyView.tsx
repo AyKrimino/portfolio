@@ -236,7 +236,7 @@ const CaseStudyView = ({ project, caseStudy }: CaseStudyViewProps) => {
                 open={activeScreenshot !== null}
                 onOpenChange={(open) => !open && setActiveScreenshot(null)}
               >
-                <DialogContent className="max-w-3xl">
+                <DialogContent className="w-[95vw] max-w-6xl!">
                   {activeScreenshot !== null && (
                     <>
                       <DialogHeader>
