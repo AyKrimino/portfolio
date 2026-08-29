@@ -58,33 +58,33 @@ export const CASE_STUDIES: Record<string, ProjectCaseStudy> = {
     media: {
       screenshots: [
         {
-          src: "case-studies/posify/screenshot-1.png",
+          src: "/case-studies/posify/screenshot-1.png",
           alt: "POSIFY Backoffice dashboard",
         },
         {
-          src: "case-studies/posify/screenshot-2.png",
+          src: "/case-studies/posify/screenshot-2.png",
           alt: "POSIFY POS terminal interface",
         },
         {
-          src: "case-studies/posify/screenshot-3.png",
+          src: "/case-studies/posify/screenshot-3.png",
           alt: "POSIFY configuration screen",
         },
       ],
-      videoSrc: "case-studies/posify/demo.mp4",
+      videoSrc: "/case-studies/posify/demo.mp4",
       reportDocument: {
         label: "PFE Report",
-        src: "case-studies/posify/report.pdf",
+        src: "/case-studies/posify/report.pdf",
         downloadName: "Ayoub_Krimi_PFE_Report_POSIFY.pdf",
       },
       presentations: [
         {
           label: "ISI Ariana — Defense Presentation",
-          src: "case-studies/posify/defense-presentation.pdf",
+          src: "/case-studies/posify/defense-presentation.pdf",
           downloadName: "POSIFY_ISI_Defense_Presentation.pdf",
         },
         {
           label: "Asteroidea — Internal Presentation",
-          src: "case-studies/posify/asteroidea-presentation.pdf",
+          src: "/case-studies/posify/asteroidea-presentation.pdf",
           downloadName: "POSIFY_Asteroidea_Presentation.pdf",
         },
       ],
