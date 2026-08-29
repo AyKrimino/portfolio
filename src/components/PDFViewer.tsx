@@ -20,8 +20,9 @@ import {
   DialogTitle,
   DialogDescription,
 } from "./ui/dialog";
+import { withBasePath } from "@/lib/base-path";
 
-pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+pdfjs.GlobalWorkerOptions.workerSrc = withBasePath("/pdf.worker.min.mjs");
 
 const MIN_SCALE = 0.5;
 const MAX_SCALE = 2.5;

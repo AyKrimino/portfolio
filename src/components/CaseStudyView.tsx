@@ -24,6 +24,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "./ui/tabs";
 import { ThemeToggle } from "./ThemeToggle";
 import type { Project } from "@/types/projects";
 import type { ProjectCaseStudy, CaseStudyDocument } from "@/types/case-study";
+import { withBasePath } from "@/lib/base-path";
 
 const PDFViewer = dynamic(() => import("./PDFViewer"), { ssr: false });
 
@@ -194,7 +195,7 @@ const CaseStudyView = ({ project, caseStudy }: CaseStudyViewProps) => {
         )}
 
         {/* Video demo */}
-        {caseStudy.media.videoSrc && (
+        {withBasePath(caseStudy.media.videoSrc || "") && (
           <section className="mb-12">
             <h2 className="text-xl font-semibold mb-4">Demo</h2>
             <div className="rounded-xl overflow-hidden border border-border/60 bg-black">
@@ -219,7 +220,7 @@ const CaseStudyView = ({ project, caseStudy }: CaseStudyViewProps) => {
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {caseStudy.media.screenshots.map((shot, idx) => (
                   <button
-                    key={shot.src}
+                    key={withBasePath(shot.src)}
                     onClick={() => setActiveScreenshot(idx)}
                     className="group relative aspect-video rounded-lg overflow-hidden border border-border/60 hover:border-border transition-colors cursor-pointer"
                   >
@@ -245,7 +246,7 @@ const CaseStudyView = ({ project, caseStudy }: CaseStudyViewProps) => {
                         </DialogTitle>
                       </DialogHeader>
                       <img
-                        src={caseStudy.media.screenshots![activeScreenshot].src}
+                        src={withBasePath(caseStudy.media.screenshots![activeScreenshot].src)}
                         alt={caseStudy.media.screenshots![activeScreenshot].alt}
                         className="w-full h-auto rounded-lg"
                       />
@@ -283,9 +284,9 @@ const CaseStudyView = ({ project, caseStudy }: CaseStudyViewProps) => {
 
               {documents.map((doc) => (
                 <TabsContent key={doc.key} value={doc.key} className="mt-4">
-                  <PDFViewer file={doc.src} downloadFileName={doc.downloadName} />
+                  <PDFViewer file={withBasePath(doc.src)} downloadFileName={doc.downloadName} />
                   <div className="flex justify-center mt-4">
-                    <a href={doc.src} download={doc.downloadName}>
+                    <a href={withBasePath(doc.src)} download={doc.downloadName}>
                       <Button variant="outline" size="sm">
                         <Download className="h-4 w-4" />
                         Download {doc.label}
