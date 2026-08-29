@@ -225,7 +225,7 @@ const CaseStudyView = ({ project, caseStudy }: CaseStudyViewProps) => {
                     className="group relative aspect-video rounded-lg overflow-hidden border border-border/60 hover:border-border transition-colors cursor-pointer"
                   >
                     <img
-                      src={shot.src}
+                      src={withBasePath(shot.src)}
                       alt={shot.alt}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
