@@ -194,6 +194,28 @@ const CaseStudyView = ({ project, caseStudy }: CaseStudyViewProps) => {
           </section>
         )}
 
+        {/* Development activity */}
+        <section className="mb-12">
+          <h2 className="text-xl font-semibold mb-4">Consistent, Active Development</h2>
+          <Card className="border-border/60">
+            <CardContent className="pt-6">
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4">
+                Asteroidea uses GitLab internally rather than GitHub, so this activity
+                graph is the real day-to-day record of the internship and freelance
+                work — commits, merge requests, and reviews on POSIFY, not a GitHub
+                profile that happens to look quiet during that period.
+              </p>
+              <div className="rounded-xl overflow-hidden border border-border/60">
+                <img
+                  src={withBasePath("/case-studies/posify/gitlab-activity.png")}
+                  alt="GitLab contribution activity during the POSIFY internship and freelance engagement"
+                  className="w-full h-auto"
+                />
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
         {/* Video demo */}
         {withBasePath(caseStudy.media.videoSrc || "") && (
           <section className="mb-12">
